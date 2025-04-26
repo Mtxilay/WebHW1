@@ -1,0 +1,60 @@
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  
+
+.logo {
+    width: 64px;
+    height: auto; /* keeps the correct proportions */
+}
+
+.menu {
+    font-size: 30px;
+    padding-left: 135px;
+}
+
+.mainimage {
+    width: 100vw;
+
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none; /* removes the dots */
+    padding: 0; /* removes default padding */
+    margin: 0; /* removes default margin */
+    display: flex; /* makes the list horizontal */
+    gap: 20px; /* adds space between the links */
+    align-items: center; /* aligns items nicely */
+}
+
+nav a {
+    text-decoration: none; /* removes the underline from links */
+    color: #612999; /* makes the text color black (or choose any color you want) */
+}
+
+header {
+    display: flex; /* put logo and nav side by side */
+    justify-content: space-between;
+    align-items: center; /* center them vertically */
+    padding: 32px;
+    font-family: 'Nunito',sans-serif;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+
