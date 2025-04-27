@@ -10,7 +10,12 @@
 
   }
 
-  
+  a:hover {
+    font-weight: bold;
+}
+ 
+
+/* Header */
 
 .logo {
     width: 64px;
@@ -32,6 +37,33 @@ h1 {
     position: relative; /* VERY important: parent is relative */
     width: 100%;
   }
+
+
+  nav ul {
+    
+    list-style: none; /* removes the dots */
+    padding: 0; /* removes default padding */
+    margin: 0; /* removes default margin */
+    display: flex; /* makes the list horizontal */
+    gap: 20px; /* adds space between the links */
+    align-items: center; /* aligns items nicely */
+}
+
+nav a {
+    text-decoration: none; /* removes the underline from links */
+    color: #612999; /* makes the text color black (or choose any color you want) */
+}
+
+header {
+    display: flex; /* put logo and nav side by side */
+    justify-content: space-between;
+    align-items: center; /* center them vertically */
+    padding: 32px;
+    font-family: 'Nunito',sans-serif;
+}
+
+
+  /*Main Image*/
   
   .mainimage {
     width: 100vw; /* if you want it full screen width */
@@ -57,31 +89,8 @@ h2{
     color: #612999;
     margin: 0;
 }
-nav ul {
-    list-style: none; /* removes the dots */
-    padding: 0; /* removes default padding */
-    margin: 0; /* removes default margin */
-    display: flex; /* makes the list horizontal */
-    gap: 20px; /* adds space between the links */
-    align-items: center; /* aligns items nicely */
-}
 
-nav a {
-    text-decoration: none; /* removes the underline from links */
-    color: #612999; /* makes the text color black (or choose any color you want) */
-}
-
-header {
-    display: flex; /* put logo and nav side by side */
-    justify-content: space-between;
-    align-items: center; /* center them vertically */
-    padding: 32px;
-    font-family: 'Nunito',sans-serif;
-}
-
-a:hover {
-    font-weight: bold;
-}
+/*About*/
 
 .about{
     font-family: 'Rubik' , sans-serif;
@@ -103,9 +112,11 @@ h4{
     font-family: 'Rubik' , sans-serif;
 }
 
+/*Products*/
+
 .products {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     padding: 32px;
     font-family: 'Abel', sans-serif;
@@ -113,7 +124,7 @@ h4{
 
 
 
-.hd490_card {
+.card {
     background-color: #EFECFF;
     border: 1px solid #ddd;
     border-radius: 38px;
@@ -121,18 +132,27 @@ h4{
     height: 496px;
     text-align: center;
     position: relative;
+    margin-right:32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.cardimage {
+    width: 376px;
+    height: 276px;
+    border-radius: 32px;
+    object-fit: cover;
 }
 
 
-
-.hd490_card h5 {
+.card h5 {
     font-size: 30px;
     margin-top: 32px;
     margin-bottom:0px;
 
 }
 
-.hd490_card p {
+.card p {
     font-size: 18px;
     margin-left: 32px;
     margin-right: 32px;
@@ -140,7 +160,7 @@ h4{
 
 }
 
-.hd490_card p2 {
+.card p2 {
     font-size: 35px;
     text-align: left;
     color: #612999;
@@ -171,9 +191,87 @@ h4{
   }
 
 
-  .cardimage {
-    width: 376px;
-    height: 276px;
-    border-radius: 32px;
-    object-fit: cover;
+.heart_container {
+    position: absolute;
+    height:47px;
+    width:47px;
+    top: 32px;
+    right:32px;
+    background-color:#EFECFF;
+    border-radius: 50%;
+}
+
+  
+.heart {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Centering it inside the logo container */
+  width: 23px;   /* Adjust width as per your requirement */
+  height: 20x; /* Maintain aspect ratio */
+}
+
+/*Footer*/
+
+footer{
+    background-color:#EFECFF;
+    width: 100%;
+    font-family: 'Nunito',sans-serif;
+    display: flex;
+    align-items: flex-start;
+}
+
+footer p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+footer ul {
+    list-style: none; 
+    padding: 0; /* removes default padding */
+    margin-bottom: 32px; /* removes default margin */
+    align-items: center; /* aligns items nicely */
+}
+
+footer ul li{
+    margin-bottom:10px;
+}
+footer a{
+    text-decoration: none; /* removes the underline from links */
+    color: #333333;
+    margin-left: 32px;
+}
+
+p2{
+    font-size: 16x;
+    margin-left: 32px; 
+}
+
+.footer_left{
+    margin-bottom: 64px;
+}
+
+.footer_right{
+    margin-left: 150px;
+}
+
+/*Second Page*/
+.images {
+    display: flex;                    /* Use flex to align images horizontally */
+    justify-content: space-between;   /* Space between the images */
+    width: 100%;                       /* Full width of the container */
+    gap: 32px;                         /* Space between images */
+    box-sizing: border-box;  
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/* Each image */
+.images img {
+    width: calc(33.33% - 21.33px);     /* Adjust width to account for gap */
+    height: auto;                      /* Ensure height adjusts to maintain aspect ratio */
+    object-fit: contain;               /* Scale the image to fit */
+    box-sizing: border-box;            /* Include padding/border inside the image size */
+    border: 4px solid #E6DBFE;
 }
