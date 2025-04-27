@@ -22,15 +22,41 @@
     padding-left: 135px;
 }
 
-.mainimage {
-    width: 100vw;
 
-}
 
 h1 {
     font-size: 24px;
 }
 
+.image {
+    position: relative; /* VERY important: parent is relative */
+    width: 100%;
+  }
+  
+  .mainimage {
+    width: 100vw; /* if you want it full screen width */
+    max-width: 1200px;
+    height: auto; /* keep image proportions */
+    display: block; /* removes tiny gaps below images */
+  }
+  
+  .main_image_text {
+    position: absolute; /* text is absolute to .image */
+    top: 5%;
+    left:5%;
+    text-align: left;
+    max-width: 30%; /* prevents text from stretching too wide */
+    font-family: 'Nunito',sans-serif;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+
+h2{
+    font-size: 96px;
+    color: #612999;
+    margin: 0;
+}
 nav ul {
     list-style: none; /* removes the dots */
     padding: 0; /* removes default padding */
@@ -57,4 +83,97 @@ a:hover {
     font-weight: bold;
 }
 
+.about{
+    font-family: 'Rubik' , sans-serif;
+    margin:32px;
+    font-size: 20px;
+}
 
+h3{
+    font-size: 40px;
+    color: #612999;
+    margin: 0;
+}
+
+
+h4{
+    font-size: 40px;
+    color: #612999;
+    margin: 32px;
+    font-family: 'Rubik' , sans-serif;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 32px;
+    font-family: 'Abel', sans-serif;
+}
+
+
+
+.hd490_card {
+    background-color: #EFECFF;
+    border: 1px solid #ddd;
+    border-radius: 38px;
+    width: 376px;
+    height: 496px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.hd490_card h5 {
+    font-size: 30px;
+    margin-top: 32px;
+    margin-bottom:0px;
+
+}
+
+.hd490_card p {
+    font-size: 18px;
+    margin-left: 32px;
+    margin-right: 32px;
+    text-align: left;
+
+}
+
+.hd490_card p2 {
+    font-size: 35px;
+    text-align: left;
+    color: #612999;
+    display: block;
+    margin-left:32px;
+
+}
+
+.logo-container {
+    position: absolute;
+    height:63px;
+    width:63px;
+    bottom: 21px;
+    right:32px;
+    background-color: #612999;
+    border-radius: 50%;
+
+    
+  }
+  
+  .cart {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centering it inside the logo container */
+    width: 31px;   /* Adjust width as per your requirement */
+    height: 31x; /* Maintain aspect ratio */
+  }
+
+
+  .cardimage {
+    width: 376px;
+    height: 276px;
+    border-radius: 32px;
+    object-fit: cover;
+}
