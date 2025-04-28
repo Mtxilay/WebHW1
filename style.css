@@ -263,15 +263,59 @@ p2{
     width: 100%;                       /* Full width of the container */
     gap: 32px;                         /* Space between images */
     box-sizing: border-box;  
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-left: 32px; /* Add padding inside */
+    padding-right: 32px;
 }
 
-/* Each image */
+/* Top Images */
 .images img {
     width: calc(33.33% - 21.33px);     /* Adjust width to account for gap */
     height: auto;                      /* Ensure height adjusts to maintain aspect ratio */
     object-fit: contain;               /* Scale the image to fit */
     box-sizing: border-box;            /* Include padding/border inside the image size */
     border: 4px solid #E6DBFE;
+
 }
+
+/* Product List*/
+
+.product_list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik',sans-serif;
+    font-size: 24px;
+
+
+  }
+
+  .product_list li {
+    display: flex;         /* align bullet + text horizontally */
+    align-items: center;   /* center vertically */
+    margin-bottom: 32px;   /* space between list items */
+    color:#333333;
+  }
+  
+  .bullet_icon{
+    width:82px;
+    height: 82px;
+    background-color:#612999;
+    border-radius: 50%;
+    margin-right: 32px;
+    position:relative;
+    
+  }
+
+  .rocket_img{
+    width: 29px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+    
+  }
+
+  
