@@ -6,9 +6,11 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 
   }
+
+
 
   a:hover {
     font-weight: bold;
@@ -16,43 +18,6 @@
  
 
 /* Header */
-
-.logo {
-    width: 64px;
-    height: auto; /* keeps the correct proportions */
-}
-
-.menu {
-    font-size: 30px;
-    padding-left: 135px;
-}
-
-
-
-h1 {
-    font-size: 24px;
-}
-
-.image {
-    position: relative; /* VERY important: parent is relative */
-    width: 100%;
-  }
-
-
-  nav ul {
-    
-    list-style: none; /* removes the dots */
-    padding: 0; /* removes default padding */
-    margin: 0; /* removes default margin */
-    display: flex; /* makes the list horizontal */
-    gap: 20px; /* adds space between the links */
-    align-items: center; /* aligns items nicely */
-}
-
-nav a {
-    text-decoration: none; /* removes the underline from links */
-    color: #612999; /* makes the text color black (or choose any color you want) */
-}
 
 header {
     display: flex; /* put logo and nav side by side */
@@ -62,8 +27,55 @@ header {
     font-family: 'Nunito',sans-serif;
 }
 
+.logo_container {
+    display: flex;
+    align-items: left; /* Align logo and title vertically */
+  }
+
+
+.logo {
+    width: 64px;
+    height: 64px; /* keeps the correct proportions */
+}
+
+
+h1 {
+    font-size: 24px;
+
+}
+
+.menu {
+    font-size: 30px;
+
+}
+
+
+  nav ul {
+    
+    list-style: none; /* removes the dots */
+    padding: 0; /* removes default padding */
+    margin: 0; /* removes default margin */
+    display: flex; /* makes the list horizontal */
+    gap: 64px; /* adds space between the links */
+    align-items: center; /* aligns items nicely */
+    padding-left:64px;
+    padding-right:64px;
+}
+
+nav a {
+    text-decoration: none; /* removes the underline from links */
+    color: #612999; /* makes the text color black (or choose any color you want) */
+}
+
+
 
   /*Main Image*/
+
+  .image {
+    position: relative; /* VERY important: parent is relative */
+    width: 100%;
+  }
+
   
   .mainimage {
     width: 100vw; /* if you want it full screen width */
@@ -75,7 +87,7 @@ header {
   .main_image_text {
     position: absolute; /* text is absolute to .image */
     top: 5%;
-    left:5%;
+    left:32px;
     text-align: left;
     max-width: 30%; /* prevents text from stretching too wide */
     font-family: 'Nunito',sans-serif;
@@ -105,20 +117,23 @@ h3{
 }
 
 
+
+
+/*Products*/
+
 h4{
     font-size: 40px;
     color: #612999;
-    margin: 32px;
+    margin-left: 32px;
     font-family: 'Rubik' , sans-serif;
 }
-
-/*Products*/
 
 .products {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    padding: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     font-family: 'Abel', sans-serif;
 }
 
@@ -133,7 +148,6 @@ h4{
     text-align: center;
     position: relative;
     margin-right:32px;
-    margin-top: 32px;
     margin-bottom: 32px;
 }
 
@@ -277,7 +291,16 @@ p2{
 
 }
 
+
 /* Product List*/
+
+h6{
+    font-size: 40px;
+    color: #612999;
+    margin-left: 32px;
+    margin-bottom: 0;
+    font-family: 'Rubik' , sans-serif;
+}
 
 .product_list {
     list-style: none; /* Remove default bullets */
@@ -318,4 +341,174 @@ p2{
     
   }
 
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit the maximum size */
+    margin: 0 auto;   /* Center it horizontally */
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  /* Phones */
+
+  @media (max-width: 1232px) {
+  
+    .wrapper {
+
+        max-width: 768px;
+      }
+    
+  
+    header {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 32px;
+      padding: 0;
+    }
+      
+      .mainimage {
+        width: 100vw; /* if you want it full screen width */
+        max-width: 768px;
+        height: auto; /* keep image proportions */
+        display: block; /* removes tiny gaps below images */
+      }
+      
+    .main_image_text {
+        font-size: clamp(14px, 3vw, 24px);
+      max-width: 40%;
+      left: 20px;
+    }
+  
+    h3, h4 {
+      font-size: 40px;
+    }
+
+    h2{
+        font-size: clamp(32px, 4vw, 48px);
+          
+    }
+  
+    .products {
+      justify-content: center;
+    }
+
+  
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer p{
+        margin-left:0px;
+    }
+    
+    footer ul {
+        list-style: none; 
+        padding: 0; /* removes default padding */
+        margin-bottom: 32px; /* removes default margin */
+        align-items: center; /* aligns items nicely */
+    }
+    
+    footer ul li{
+        margin-bottom:10px;
+    }
+    footer a{
+        text-decoration: none; /* removes the underline from links */
+        color: #333333;
+        gap:32px;
+        margin-left:0px;
+    }
+
+    footer p{
+        margin:0px;
+    }
+    
+    p2{
+        margin: 0px; 
+    }
+    
+    .footer_left{
+        margin-bottom: 16px;
+        flex:none;
+        text-align: center;
+    }
+    
+    .footer_right{
+        margin-left: 0px;
+        flex: none;
+        text-align: center;
+    }
+
+    /*Second Page*/
+
+    h6{
+        font-size: clamp(32px, 4vw, 48px);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product_list {
+        list-style: none; /* Remove default bullets */
+        padding: 0;
+        margin: 0;
+        font-family: 'Rubik',sans-serif;
+        font-size: 20px;
+        align-items: center;
+    
+    
+      }
+
+      .product_list li {
+        display: flex;         /* align bullet + text horizontally */
+        align-items: center;   /* center vertically */
+        margin-bottom: 32px;   /* space between list items */
+        color:#333333;
+      }
+      
+      .bullet_icon{
+        width:42px;
+        height: 42px;
+        background-color:#612999;
+        border-radius: 50%;
+        margin-right: 16px;
+        position:relative;
+        
+      }
+    
+      .rocket_img{
+        width: 20px;
+        height: auto;
+        object-fit: contain;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    
+        
+      }
+    
+      .video-wrapper {
+        max-width: 704px; /* Optional: limit the maximum size */
+      }
+      
+
+  }
   
